@@ -43,6 +43,9 @@ tbody tr:nth-child(odd) {
 .nav-container button {
   cursor: pointer;
   padding: 0.3rem 1rem;
+  background: none;
+  border: none;
+  font-weight: bold;
 }
 
 button:first-child i {
