@@ -59,7 +59,7 @@ tbody tr:nth-child(odd) {
     display: block;
   }
 
-  thead tr {
+  thead {
     display: none;
   }
 
