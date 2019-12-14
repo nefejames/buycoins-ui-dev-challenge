@@ -45,6 +45,14 @@ tbody tr:nth-child(odd) {
   padding: 0.3rem 1rem;
 }
 
+button:first-child i {
+  margin-right: 0.5rem;
+}
+
+button:last-child i {
+  margin-left: 0.3rem;
+}
+
 .hide-btn {
   visibility: hidden;
 }

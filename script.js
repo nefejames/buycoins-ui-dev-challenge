@@ -50,7 +50,7 @@ const showPrevTenCrypto = () => {
   start -= 10;
 
   fetchCrypto();
-  toggleButtonDisplay(count);
+  toggleButtonDisplay();
 };
 
 prevBtn.addEventListener("click", showPrevTenCrypto);
