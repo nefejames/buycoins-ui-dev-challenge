@@ -27,7 +27,7 @@ const fetchCrypto = () => {
           <td class="crypto-total">${crypto.tsupply}</td>
         </tr>
       `;
-        tableBody.insertAdjacentHTML("beforeend", tableRowData);
+        tableBody.insertHTML("beforeend", tableRowData);
       });
     })
     .catch(err => console.log(err));
@@ -37,6 +37,7 @@ window.onload = () => {
   fetchCrypto();
 };
 
+//fetch previous 10 crypto
 const showNextTenCrypto = () => {
   tableBody.innerHTML = "";
   start += 10;
@@ -45,6 +46,7 @@ const showNextTenCrypto = () => {
   toggleButtonDisplay();
 };
 
+//fetch next 10 crypto
 const showPrevTenCrypto = () => {
   tableBody.innerHTML = "";
   start -= 10;
@@ -56,12 +58,9 @@ const showPrevTenCrypto = () => {
 prevBtn.addEventListener("click", showPrevTenCrypto);
 nextBtn.addEventListener("click", showNextTenCrypto);
 
+//toogle display of  prev btn
 const toggleButtonDisplay = () => {
   start >= 10
     ? prevBtn.classList.remove("hide-btn")
     : prevBtn.classList.add("hide-btn");
-
-  start < 10
-    ? prevBtn.classList.add("hide-btn")
-    : prevBtn.classList.remove("hide-btn");
 };
